@@ -99,7 +99,7 @@ header img {
 
 .navi {
     background: #7cdce9;
-    color: #B40533;
+    color: black;
     position: fixed;
     overflow: hidden;
     top: 0;
@@ -128,6 +128,10 @@ nav li {
 nav li a {
     display: block;
     color: #B40533;
+}
+
+nav a:hover {
+    color: black;
 }
 
 .menu-background {
@@ -235,6 +239,72 @@ ul {
     display: flex;
     margin-right: 15px;
     align-items: center;
+}
+
+.newsnavi a {
+    color: black;
+}
+
+.newsnavi a:hover {
+    color: #B40533;
+}
+
+.img-radius {
+    padding: 0 !important;
+}
+
+.img-radius img {
+    border-radius: 15px;
+}
+
+/*目次*/
+.table_of_contents {
+    width: 300px;
+    margin: 0 auto;
+    border-radius: 3px;
+    background-color: rgb(255, 246, 228);
+}
+
+.table_of_contents div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 10px 0;
+    background-color: #7cdce9;
+    color: #B40533;
+    font-weight: 600;
+    font-size: 1.1em;
+}
+
+.table_of_contents li {
+    padding: 5px 0;
+    font-weight: 600;
+}
+
+.table_of_contents a {
+    color: #000000;
+}
+
+.table_of_contents a:hover {
+    color: #B40533;
+}
+
+
+
+.tableArea {
+    display: table;
+    width: 100%;
+}
+
+.table_left {
+    display: table-cell;
+    text-align: left;
+}
+
+.table_right {
+    display: table-cell;
+    text-align: right;
 }
 
 
