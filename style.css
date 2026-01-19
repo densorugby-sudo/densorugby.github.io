@@ -336,3 +336,20 @@ ul {
     opacity: 0.5;
     /* ホバーした時に記事タイトルを透過 */
 }
+
+.image-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 常に2列 */
+    width: 80vw;                   /* ウィンドウに追従 */
+    max-width: 800px;              /* 最大サイズ */
+    aspect-ratio: 1 / 1;           /* 全体を正方形に */
+    row-gap: 5px;
+    column-gap: 20px;
+    margin: 0 auto;                /* 中央寄せ */
+  }
+
+  .image-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;           /* 画像比率維持 */
+  }
