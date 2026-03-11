@@ -77,6 +77,8 @@ header p {
 
 header img {
     display: block;
+    height: 80px;
+    width: auto;
 }
 
 .introback {
