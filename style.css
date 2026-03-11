@@ -143,6 +143,10 @@ nav a:hover {
     color: black;
 }
 
+.close span{
+  white-space: nowrap;
+}
+
 .menu-background {
     position: fixed;
     top: 0;
@@ -402,19 +406,19 @@ ul {
   }
 
   header h2{
-    font-size:14px;
+    font-size:12px;
     white-space: nowrap;
   }
     
   .open-menu{
-    width:70%;
+    width:80%;
   }
 
   nav ul{
     padding:80px 30px;
   }
 
-　nav li{
+  nav li{
     font-size:18px;
   }
 
