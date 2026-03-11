@@ -200,6 +200,15 @@ side {
     color: #B40533;
 }
 
+.footer-right p{
+  text-align:center;
+}
+
+.footer-right img{
+  display:inline-block;
+  margin:0 10px;
+}
+
 .footer-bottom {
     display: flex;
     margin-left: 20%;
