@@ -385,5 +385,8 @@ ul {
   .open-menu{
     width:70%;
   }
-    
+
+  nav ul{
+    padding:80px 30px;
+  }
 }
