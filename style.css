@@ -173,7 +173,14 @@ side {
     font-size: small;
 }
 
+.sns{
+  text-align:center;
+}
 
+.sns a{
+  display:inline-block;
+  margin:0 10px;
+}
 
 .table-text {
     font-weight: 440;
