@@ -413,6 +413,14 @@ ul {
   header p{
     font-size:14px;
   }
+
+  header{
+    height:60px;
+  }
+
+  header img{
+    height:60px;
+  }
     
   .open-menu{
     width:80%;
