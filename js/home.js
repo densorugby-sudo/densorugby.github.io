@@ -6,7 +6,7 @@ menu.addEventListener("click", () => {
     if (nav.className === "navi") {
         nav.classList.add("open-menu");
         back.classList.add("open");
-        menu.textContent = "閉じる";
+        menu.textContent = "×";
     } else {
         nav.classList.remove("open-menu");
         back.classList.remove("open");
