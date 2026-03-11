@@ -409,6 +409,10 @@ ul {
     font-size:12px;
     white-space: nowrap;
   }
+
+  header p{
+    font-size:14px;
+  }
     
   .open-menu{
     width:80%;
