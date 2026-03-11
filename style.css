@@ -413,15 +413,15 @@ ul {
 
   header p{
     font-size:14px;
-    line-height:60px;
+    line-height:40px;
   }
 
   header{
-    height:60px;
+    height:40px;
   }
 
   header img{
-    height:60px;
+    height:40px;
   }
     
   .open-menu{
