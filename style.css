@@ -156,6 +156,7 @@ nav a:hover {
     height: 0;
     background: black;
     opacity: 0.8;
+    z-index: 50;
 }
 
 .open {
