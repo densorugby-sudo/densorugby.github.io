@@ -38,6 +38,11 @@ html {
     margin: 20px;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 header {
     background: #7cdce9;
     display: flex;
