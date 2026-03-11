@@ -174,17 +174,19 @@ side {
 }
 
 #quote {
-    text-align: right;
+    text-align: center;
     font-size: small;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .sns{
-  text-align:center;
+    text-align:center;
 }
 
 .sns a{
-  display:inline-block;
-  margin:0 10px;
+    display:inline-block;
+    margin:0 10px;
 }
 
 .table-text {
