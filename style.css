@@ -378,4 +378,12 @@ ul {
     font-size: 18px;
   }
 
+  header h2{
+    font-size:16px;
+  }
+    
+  .open-menu{
+    width:70%;
+  }
+    
 }
