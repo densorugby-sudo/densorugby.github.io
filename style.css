@@ -361,3 +361,19 @@ ul {
     height: 100%;
     object-fit: contain;           /* 画像比率維持 */
   }
+
+@media (max-width: 600px){
+
+  h1{
+    font-size: 26px;
+  }
+
+  h2{
+    font-size: 22px;
+  }
+
+  h3{
+    font-size: 18px;
+  }
+
+}
