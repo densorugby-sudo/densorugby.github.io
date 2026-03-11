@@ -402,8 +402,9 @@ ul {
   }
 
   header h2{
-    font-size: clamp(14px, 2vw, 24px);
-}
+    font-size:14px;
+    white-space: nowrap;
+  }
     
   .open-menu{
     width:70%;
@@ -411,6 +412,10 @@ ul {
 
   nav ul{
     padding:80px 30px;
+  }
+
+　nav li{
+    font-size:18px;
   }
 
   #youkoso{
