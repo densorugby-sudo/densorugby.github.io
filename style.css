@@ -266,7 +266,8 @@ ul {
 
 /*目次*/
 .table_of_contents {
-    width: 300px;
+    max-width: 300px;
+    width: 90%;
     margin: 0 auto;
     border-radius: 3px;
     background-color: rgb(255, 246, 228);
