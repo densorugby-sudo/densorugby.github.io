@@ -1,5 +1,10 @@
 html {
-    font-family: century;
+  font-family:
+    "Century",
+    "Hiragino Kaku Gothic ProN",
+    "Noto Sans JP",
+    "Yu Gothic",
+    sans-serif;
 }
 
 body {
