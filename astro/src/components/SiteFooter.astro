@@ -1,0 +1,33 @@
+---
+interface Props {
+  base?: string;
+}
+
+const { base = "" } = Astro.props;
+---
+
+<footer class="footer site-footer">
+  <div class="footer-top">
+    <h2>電気通信大学×早稲田大学理工ラグビー部</h2>
+    <p>The Univ.of Electro-Communications × Faculty of Science and Engineering, Waseda Univ. Rugby Football Club</p>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-left">
+      <h3>SiteMap</h3>
+      <ul>
+        <li><a href={`${base}index.html`}>TOP</a></li>
+        <li><a href={`${base}news.html`}>NEWS</a></li>
+        <li><a href={`${base}about.html`}>ABOUT</a></li>
+        <li><span class="footer-link-disabled" aria-disabled="true" title="準備中">RESULTS</span></li>
+        <li><a href={`${base}access.html`}>ACCESS</a></li>
+      </ul>
+    </div>
+    <div class="footer-right">
+      <h3>Links</h3>
+      <p>
+        <a href="https://www.instagram.com/uec_waseda/"><img src={`${base}Instagram_Glyph_Gradient.png`} alt="Instagram"></a>
+        <a href="https://x.com/uec_wasedarugby"><img src={`${base}Xlogo.png`} alt="X"></a>
+      </p>
+    </div>
+  </div>
+</footer>

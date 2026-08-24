@@ -1,0 +1,79 @@
+---
+import SiteHeader from "../components/SiteHeader.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+import PageTop from "../components/PageTop.astro";
+---
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ABOUT|電気通信大学×早稲田大学理工ラグビー部</title>
+  <meta name="description" content="電早ラグビー部の特徴、活動の魅力、ロゴ、メンバーについて紹介します。">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="home-page site-page about-page">
+  <SiteHeader active="about" />
+  <PageTop />
+
+  <main class="sub-main about-main">
+    <header class="page-hero page-hero--about">
+      <span>ABOUT</span>
+      <h1>電早ラグビー部について</h1>
+      <p>大学も、経験も越えて。ラグビーを一緒に楽しむチームです。</p>
+    </header>
+
+    <section class="about-intro about-section" aria-labelledby="about-club-title">
+      <div class="about-intro__image"><img src="shinkan1.jpeg" alt="電早ラグビー部の練習風景"></div>
+      <div class="about-intro__copy">
+        <span class="section-kicker">WHO WE ARE</span>
+        <h2 id="about-club-title">電早ラグビー部とは？</h2>
+        <p>電気通信大学と早稲田大学理工を中心に活動するラグビー部です。選手、マネージャー共に、初心者も大歓迎！電通大、早稲田以外の大学生も大歓迎です。</p>
+        <p>毎月、日程調整後に練習日を決定し、主に公式戦や合宿を控えた時期に活動しています。他チームと合同練習を組むこともあります。</p>
+        <dl class="about-facts">
+          <div><dt>ACTIVITY</dt><dd>土曜日 13：00～15：00</dd></div>
+          <div><dt>PLACE</dt><dd>電通大多摩川グラウンド</dd></div>
+          <div><dt>WELCOME</dt><dd>初心者・他大学・マネージャー歓迎</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="about-section about-good" aria-labelledby="about-good-title">
+      <div class="about-heading"><span class="section-kicker">GOOD POINTS</span><h2 id="about-good-title">電早のここが良い！</h2></div>
+      <div class="about-good__grid">
+        <article><span>01</span><h3>初心者から楽しめる</h3><p>ラグビーについて知ってみたい方も歓迎。経験に関係なく、一緒にラグビーを楽しめます。</p></article>
+        <article><span>02</span><h3>大学を越えてつながれる</h3><p>電通大、早稲田以外の学生も参加できます。合同練習を通じて、さらに仲間が広がります。</p></article>
+        <article><span>03</span><h3>予定と両立しやすい</h3><p>毎月予定を調整して活動日を決定。テストやアルバイトと両立しながら参加できます。</p></article>
+        <article><span>04</span><h3>試合や合宿に挑戦できる</h3><p>セブンズ、秋季大会、菅平合宿など、練習の成果を発揮できる機会があります。</p></article>
+      </div>
+    </section>
+
+    <section class="about-section logo-story" aria-labelledby="logo-title">
+      <div class="logo-story__visual"><img src="rugby_logo.PNG" alt="電早ラグビー部ロゴ"></div>
+      <div class="logo-story__copy">
+        <span class="section-kicker">OUR SYMBOL</span>
+        <h2 id="logo-title">ロゴ紹介</h2>
+        <p>公式サイトやSNSで使用している、電早ラグビー部のロゴです。チームを表す大切なシンボルとして、さまざまな活動の中で使用しています。</p>
+        <div class="logo-colors" aria-label="サイトのテーマカラー">
+          <span class="logo-color logo-color--waseda">WASEDA RED</span>
+          <span class="logo-color logo-color--uec">UEC BLUE</span>
+          <span class="logo-color logo-color--tuat">GREEN</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section member-voices" aria-labelledby="voices-title">
+      <div class="about-heading"><span class="section-kicker">VOICES</span><h2 id="voices-title">メンバーたちの声</h2><p>選手・マネージャーの実際のコメントを、今後こちらで紹介します。</p></div>
+      <div class="voice-grid">
+        <article><span>PLAYER</span><h3>選手・経験者</h3><p>メンバーコメント掲載準備中</p></article>
+        <article><span>BEGINNER</span><h3>選手・初心者</h3><p>メンバーコメント掲載準備中</p></article>
+        <article><span>MANAGER</span><h3>マネージャー</h3><p>メンバーコメント掲載準備中</p></article>
+      </div>
+    </section>
+  </main>
+
+  <SiteFooter />
+  <script is:inline src="/js/site.js"></script>
+</body>
+</html>

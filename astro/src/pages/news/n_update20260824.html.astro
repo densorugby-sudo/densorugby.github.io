@@ -1,0 +1,39 @@
+---
+import SiteHeader from "../../components/SiteHeader.astro";
+import SiteFooter from "../../components/SiteFooter.astro";
+import PageTop from "../../components/PageTop.astro";
+---
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEWS|2026.08.24|電気通信大学×早稲田大学理工ラグビー部</title>
+  <meta name="description" content="電早ラグビー部公式サイトのアップデートについてのお知らせです。">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="home-page site-page article-page">
+  <SiteHeader active="news" base="../" />
+  <PageTop />
+
+  <main class="main">
+    <h2>NEWS</h2>
+    <h3>2026.08.24</h3>
+    <h3>公式サイトをアップデートしました！</h3>
+    <p class="article-placeholder">記事本文は準備中です。</p>
+
+    <nav class="newsnavi" aria-label="記事ナビゲーション">
+      <table class="tableArea">
+        <tr>
+          <td class="table_right"><a href="n_shinkan2026.html">前へ →</a></td>
+        </tr>
+      </table>
+      <p class="article-list-link"><a href="../news.html">ニュース一覧へ戻る</a></p>
+    </nav>
+  </main>
+
+  <SiteFooter base="../" />
+  <script is:inline src="/js/site.js"></script>
+</body>
+</html>

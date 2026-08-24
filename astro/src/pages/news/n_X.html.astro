@@ -1,3 +1,8 @@
+---
+import SiteHeader from "../../components/SiteHeader.astro";
+import SiteFooter from "../../components/SiteFooter.astro";
+---
+
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -17,7 +22,8 @@
     <meta property="og:site_name" content="電気通信大学×早稲田大学理工ラグビー部" />
 </head>
 
-<body>
+<body class="home-page site-page article-page">
+    <SiteHeader active="news" base="../" />
     <header>
         <a href="../index.html"><img src="../rugby_logo.PNG" alt="rug_logo" width="100px" height="80px"></a>
         <h2><a href="../index.html" id="header-name">電気通信大学×早稲田大学理工ラグビー部</a></h2>
@@ -94,7 +100,8 @@
             </div>
         </div>
     </footer>
-    <script is:inline src="/js/home.js"></script>
+    <SiteFooter base="../" />
+    <script is:inline src="/js/site.js"></script>
 
 </body>
 

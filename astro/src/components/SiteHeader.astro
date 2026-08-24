@@ -1,0 +1,30 @@
+---
+interface Props {
+  active?: "top" | "news" | "about" | "access";
+  base?: string;
+}
+
+const { active, base = "" } = Astro.props;
+---
+
+<header class="site-header">
+  <a class="site-brand" href={`${base}index.html`} aria-label="トップページへ">
+    <img src={`${base}rugby_logo.PNG`} alt="電早ラグビー部ロゴ">
+    <span>電早ラグビー部</span>
+  </a>
+  <button id="menu" class="menu-button" type="button" aria-controls="nav" aria-expanded="false">
+    <span class="menu-button__icon" aria-hidden="true"><i></i><i></i><i></i></span>
+    <span class="menu-button__label">MENU</span>
+  </button>
+  <nav id="nav" class="navi" aria-label="メインナビゲーション">
+    <ul>
+      <li><a class:list={{ "is-current": active === "top" }} href={`${base}index.html`} aria-current={active === "top" ? "page" : undefined}>TOP</a></li>
+      <li><a class:list={{ "is-current": active === "news" }} href={`${base}news.html`} aria-current={active === "news" ? "page" : undefined}>NEWS</a></li>
+      <li><a class:list={{ "is-current": active === "about" }} href={`${base}about.html`} aria-current={active === "about" ? "page" : undefined}>ABOUT</a></li>
+      <li><a class="is-disabled" href="#" aria-disabled="true" title="準備中">RESULTS</a></li>
+      <li><a class:list={{ "is-current": active === "access" }} href={`${base}access.html`} aria-current={active === "access" ? "page" : undefined}>ACCESS</a></li>
+    </ul>
+    <a class="header-cta" href="https://www.instagram.com/uec_waseda/">見学・参加はこちら(DMまで)</a>
+  </nav>
+  <div id="back" class="menu-background"></div>
+</header>
