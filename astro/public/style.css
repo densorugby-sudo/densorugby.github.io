@@ -1216,7 +1216,7 @@ html {
   text-align: center;
   background:
     linear-gradient(rgb(5 24 31 / 54%), rgb(5 24 31 / 72%)),
-    url('/sevenssyugou.jpg') center / 100% auto no-repeat,
+    url('./sevenssyugou.jpg') center / 100% auto no-repeat,
     #0e252f;
 }
 
@@ -1493,13 +1493,13 @@ html {
   color: #ffffff;
   background:
     linear-gradient(90deg, rgb(5 24 31 / 82%), rgb(5 24 31 / 44%)),
-    url('/background.jpg') center 66% / cover;
+    url('./background.jpg') center 66% / cover;
 }
 
 .page-hero--access {
   background:
     linear-gradient(90deg, rgb(5 24 31 / 82%), rgb(5 24 31 / 40%)),
-    url('/kumagaya.jpg') center / cover;
+    url('./kumagaya.jpg') center / cover;
 }
 
 .page-hero.page-hero--access h1 {
@@ -2410,7 +2410,7 @@ ul {
 .page-hero--about {
   background:
     linear-gradient(90deg, rgb(5 24 31 / 82%), rgb(5 24 31 / 38%)),
-    url('/suga3.jpeg') center 72% / cover;
+    url('./suga3.jpeg') center 72% / cover;
 }
 
 .about-section {
@@ -2816,7 +2816,7 @@ ul {
 .page-hero--members {
   background:
     linear-gradient(90deg, rgb(5 24 31 / 82%), rgb(5 24 31 / 36%)),
-    url('/suga2.jpeg') center / cover;
+    url('./suga2.jpeg') center / cover;
 }
 
 .members-section {
