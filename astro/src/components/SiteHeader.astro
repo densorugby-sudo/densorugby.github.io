@@ -1,6 +1,6 @@
 ---
 interface Props {
-  active?: "top" | "news" | "about" | "access";
+  active?: "top" | "news" | "about" | "members" | "access";
   base?: string;
 }
 
@@ -21,6 +21,7 @@ const { active, base = "" } = Astro.props;
       <li><a class:list={{ "is-current": active === "top" }} href={`${base}index.html`} aria-current={active === "top" ? "page" : undefined}>TOP</a></li>
       <li><a class:list={{ "is-current": active === "news" }} href={`${base}news.html`} aria-current={active === "news" ? "page" : undefined}>NEWS</a></li>
       <li><a class:list={{ "is-current": active === "about" }} href={`${base}about.html`} aria-current={active === "about" ? "page" : undefined}>ABOUT</a></li>
+      <li><a class="is-disabled" href="#" aria-disabled="true" title="準備中">MEMBERS</a></li>
       <li><a class="is-disabled" href="#" aria-disabled="true" title="準備中">RESULTS</a></li>
       <li><a class:list={{ "is-current": active === "access" }} href={`${base}access.html`} aria-current={active === "access" ? "page" : undefined}>ACCESS</a></li>
     </ul>

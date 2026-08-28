@@ -25,50 +25,110 @@ import PageTop from "../components/PageTop.astro";
     </header>
 
     <section class="about-intro about-section" aria-labelledby="about-club-title">
-      <div class="about-intro__image"><img src="shinkan1.jpeg" alt="電早ラグビー部の練習風景"></div>
+      <div class="about-gallery" aria-label="電早ラグビー部の活動写真">
+        <div class="about-gallery__slides">
+          <figure class="about-gallery__slide is-active"><img src="syugou3.jpg" alt="電早ラグビー部の集合写真"></figure>
+          <figure class="about-gallery__slide"><img src="prac4.jpg" alt="電早ラグビー部の練習風景"></figure>
+          <figure class="about-gallery__slide"><img src="prac5.jpg" alt="電早ラグビー部の練習風景"></figure>
+          <figure class="about-gallery__slide"><img src="pizza_soft.jpg" alt="ピザ作りの様子"></figure>
+          <figure class="about-gallery__slide"><img src="fireworks.jpg" alt="部員で楽しむ花火"></figure>
+          <figure class="about-gallery__slide"><img src="pizza2.jpg" alt="ピザ作りの様子"></figure>
+          <figure class="about-gallery__slide"><img src="scrum.jpg" alt="スクラム練習の様子"></figure>
+          <figure class="about-gallery__slide"><img src="syugou2.jpg" alt="電早ラグビー部の集合写真"></figure>
+        </div>
+        <button class="about-gallery__arrow about-gallery__arrow--prev" type="button" aria-label="前の写真を表示"></button>
+        <button class="about-gallery__arrow about-gallery__arrow--next" type="button" aria-label="次の写真を表示"></button>
+        <div class="about-gallery__dots" role="group" aria-label="写真を選択">
+          <button class="is-active" type="button" aria-label="写真1を表示" aria-pressed="true"></button>
+          <button type="button" aria-label="写真2を表示" aria-pressed="false"></button>
+          <button type="button" aria-label="写真3を表示" aria-pressed="false"></button>
+          <button type="button" aria-label="写真4を表示" aria-pressed="false"></button>
+          <button type="button" aria-label="写真5を表示" aria-pressed="false"></button>
+          <button type="button" aria-label="写真6を表示" aria-pressed="false"></button>
+          <button type="button" aria-label="写真7を表示" aria-pressed="false"></button>
+          <button type="button" aria-label="写真8を表示" aria-pressed="false"></button>
+        </div>
+      </div>
       <div class="about-intro__copy">
         <span class="section-kicker">WHO WE ARE</span>
         <h2 id="about-club-title">電早ラグビー部とは？</h2>
-        <p>電気通信大学と早稲田大学理工を中心に活動するラグビー部です。選手、マネージャー共に、初心者も大歓迎！電通大、早稲田以外の大学生も大歓迎です。</p>
-        <p>毎月、日程調整後に練習日を決定し、主に公式戦や合宿を控えた時期に活動しています。他チームと合同練習を組むこともあります。</p>
-        <dl class="about-facts">
-          <div><dt>ACTIVITY</dt><dd>土曜日 13：00～15：00</dd></div>
-          <div><dt>PLACE</dt><dd>電通大多摩川グラウンド</dd></div>
-          <div><dt>WELCOME</dt><dd>初心者・他大学・マネージャー歓迎</dd></div>
-        </dl>
+        <p>電気通信大学と早稲田大学理学部のメンバーを中心に活動するラグビー部です。2026年度から、農工大ラグビー部とも合同で活動しています。その他様々な大学の人が所属しており、選手、マネージャー共に、経験・学年問わず大歓迎！<br>合宿や文化祭、新歓などのイベントもあります！</p>
+
       </div>
     </section>
 
     <section class="about-section about-good" aria-labelledby="about-good-title">
-      <div class="about-heading"><span class="section-kicker">GOOD POINTS</span><h2 id="about-good-title">電早のここが良い！</h2></div>
+      <div class="about-heading"><span class="section-kicker">POINTS</span><h2 id="about-good-title">電早のここが良い！</h2></div>
       <div class="about-good__grid">
         <article><span>01</span><h3>初心者から楽しめる</h3><p>ラグビーについて知ってみたい方も歓迎。経験に関係なく、一緒にラグビーを楽しめます。</p></article>
         <article><span>02</span><h3>大学を越えてつながれる</h3><p>電通大、早稲田以外の学生も参加できます。合同練習を通じて、さらに仲間が広がります。</p></article>
-        <article><span>03</span><h3>予定と両立しやすい</h3><p>毎月予定を調整して活動日を決定。テストやアルバイトと両立しながら参加できます。</p></article>
-        <article><span>04</span><h3>試合や合宿に挑戦できる</h3><p>セブンズ、秋季大会、菅平合宿など、練習の成果を発揮できる機会があります。</p></article>
+        <article><span>03</span><h3>予定と両立しやすい</h3><p>毎月予定を調整して活動日を決定。テストやアルバイト、研究と両立しながら参加できます。</p></article>
+        <article><span>04</span><h3>試合や合宿に挑戦できる</h3><p>セブンズ、菅平合宿、秋の大会など、練習の成果を発揮できる機会があります。</p></article>
       </div>
     </section>
 
     <section class="about-section logo-story" aria-labelledby="logo-title">
-      <div class="logo-story__visual"><img src="rugby_logo.PNG" alt="電早ラグビー部ロゴ"></div>
+      <div class="logo-story__visual"><img src="logocircle.jpg" alt="電早ラグビー部ロゴ"></div>
       <div class="logo-story__copy">
-        <span class="section-kicker">OUR SYMBOL</span>
+        <span class="section-kicker">SYMBOL</span>
         <h2 id="logo-title">ロゴ紹介</h2>
-        <p>公式サイトやSNSで使用している、電早ラグビー部のロゴです。チームを表す大切なシンボルとして、さまざまな活動の中で使用しています。</p>
+        <p>公式サイトやSNSで使用している、電早ラグビー部のロゴです。チームを表す大切なシンボルとして、さまざまな活動の中で使用しています。<br>色は各大学のイメージカラーを使用しており、電通大の青、早稲田のえんじ色、農工大の緑を組み合わせて作られています。また、電通大を特徴づけるリサージュ曲線と、早稲田を特徴づける稲穂が描かれています。<br>ロゴの入った部特製ポロシャツやトレーナーは、普段使いにも便利です♪</p>
         <div class="logo-colors" aria-label="サイトのテーマカラー">
-          <span class="logo-color logo-color--waseda">WASEDA RED</span>
-          <span class="logo-color logo-color--uec">UEC BLUE</span>
-          <span class="logo-color logo-color--tuat">GREEN</span>
+          <span class="logo-color logo-color--uec">UEC</span>
+          <span class="logo-color logo-color--waseda">WASEDA</span>
+          <span class="logo-color logo-color--tuat">NOUKOU</span>
         </div>
       </div>
     </section>
 
     <section class="about-section member-voices" aria-labelledby="voices-title">
-      <div class="about-heading"><span class="section-kicker">VOICES</span><h2 id="voices-title">メンバーたちの声</h2><p>選手・マネージャーの実際のコメントを、今後こちらで紹介します。</p></div>
+      <div class="about-heading"><span class="section-kicker">VOICES</span><h2 id="voices-title">メンバーたちの声</h2><p>選手・マネージャーのコメントを紹介します！</p></div>
       <div class="voice-grid">
-        <article><span>PLAYER</span><h3>選手・経験者</h3><p>メンバーコメント掲載準備中</p></article>
-        <article><span>BEGINNER</span><h3>選手・初心者</h3><p>メンバーコメント掲載準備中</p></article>
-        <article><span>MANAGER</span><h3>マネージャー</h3><p>メンバーコメント掲載準備中</p></article>
+        <article>
+          <span>PLAYER</span><h3>選手・経験者</h3>
+          <dl class="voice-profile">
+            <div><dt>学年</dt><dd>掲載準備中</dd></div>
+            <div><dt>ポジション</dt><dd>掲載準備中</dd></div>
+            <div><dt>ラグビー歴</dt><dd>掲載準備中</dd></div>
+            <div><dt>電早の好きなところ</dt><dd>掲載準備中</dd></div>
+            <div><dt>一言コメント</dt><dd>掲載準備中</dd></div>
+          </dl>
+        </article>
+        <article>
+          <span>BEGINNER</span><h3>選手・初心者</h3>
+          <dl class="voice-profile">
+            <div><dt>学年</dt><dd>掲載準備中</dd></div>
+            <div><dt>ポジション</dt><dd>掲載準備中</dd></div>
+            <div><dt>ラグビー歴</dt><dd>掲載準備中</dd></div>
+            <div><dt>電早の好きなところ</dt><dd>掲載準備中</dd></div>
+            <div><dt>一言コメント</dt><dd>掲載準備中</dd></div>
+          </dl>
+        </article>
+        <article>
+          <span>MANAGER</span><h3>マネージャー</h3>
+          <dl class="voice-profile">
+            <div><dt>学年</dt><dd>掲載準備中</dd></div>
+            <div><dt>ポジション</dt><dd>掲載準備中</dd></div>
+            <div><dt>ラグビー歴</dt><dd>掲載準備中</dd></div>
+            <div><dt>電早の好きなところ</dt><dd>掲載準備中</dd></div>
+            <div><dt>一言コメント</dt><dd>掲載準備中</dd></div>
+          </dl>
+        </article>
+      </div>
+      <div class="voices-more"><span class="voices-more__disabled" aria-disabled="true" title="準備中">もっと見る →</span></div>
+    </section>
+
+    <section class="about-section welcome-movie" aria-labelledby="welcome-movie-title">
+      <div class="about-heading">
+        <span class="section-kicker">MOVIES</span>
+        <h2 id="welcome-movie-title">新歓動画（随時更新予定！）</h2>
+        <p><b>2026年度</b>の新歓動画です。<br>電早ラグビー部の活動や雰囲気を、ぜひ動画でご覧ください！</p>
+      </div>
+      <div class="welcome-movie__player">
+        <video controls preload="metadata" playsinline>
+          <source src="/rugbymovie2026.mp4" type="video/mp4">
+          お使いのブラウザは動画の再生に対応していません。
+        </video>
       </div>
     </section>
   </main>

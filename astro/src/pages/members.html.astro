@@ -1,0 +1,58 @@
+---
+import SiteHeader from "../components/SiteHeader.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+import PageTop from "../components/PageTop.astro";
+
+const members = Array.from({ length: 6 }, (_, index) => ({
+  number: String(index + 1).padStart(2, "0"),
+  name: `選手プロフィール ${index + 1}`,
+}));
+---
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MEMBERS|電気通信大学×早稲田大学理工ラグビー部</title>
+  <meta name="description" content="電早ラグビー部で活動する選手のプロフィールを紹介します。">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="home-page site-page members-page">
+  <SiteHeader active="members" />
+  <PageTop />
+
+  <main class="sub-main members-main">
+    <header class="page-hero page-hero--members">
+      <span>MEMBERS</span>
+      <h1>選手プロフィール</h1>
+      <p>電早ラグビー部で活動するメンバーをご紹介します。</p>
+    </header>
+
+    <section class="members-section" aria-labelledby="members-title">
+      <div class="members-heading">
+        <span class="section-kicker">VOICES</span>
+        <h2 id="members-title">メンバーたちの声</h2>
+      </div>
+      <div class="members-grid">
+        {members.map((member) => (
+          <article class="member-profile-card">
+            <div class="member-profile-card__heading"><span>{member.number}</span><h3>{member.name}</h3></div>
+            <dl class="member-profile">
+              <div><dt>学年</dt><dd>掲載準備中</dd></div>
+              <div><dt>ポジション</dt><dd>掲載準備中</dd></div>
+              <div><dt>ラグビー歴</dt><dd>掲載準備中</dd></div>
+              <div><dt>電早の好きなところ</dt><dd>掲載準備中</dd></div>
+              <div><dt>一言コメント</dt><dd>掲載準備中</dd></div>
+            </dl>
+          </article>
+        ))}
+      </div>
+      <a class="members-back" href="about.html#voices-title">ABOUTページへ戻る →</a>
+    </section>
+  </main>
+
+  <SiteFooter />
+  <script is:inline src="/js/site.js"></script>
+</body>
+</html>
