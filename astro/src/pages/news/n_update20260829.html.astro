@@ -2,6 +2,7 @@
 import SiteHeader from "../../components/SiteHeader.astro";
 import SiteFooter from "../../components/SiteFooter.astro";
 import PageTop from "../../components/PageTop.astro";
+const base = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
 ---
 
 <!DOCTYPE html>
@@ -11,17 +12,17 @@ import PageTop from "../../components/PageTop.astro";
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NEWS|2026.08.29|電気通信大学×早稲田大学理工ラグビー部</title>
   <meta name="description" content="電早ラグビー部公式サイトのアップデートについてのお知らせです。">
-  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href={`${base}style.css`}>
 </head>
 <body class="home-page site-page article-page">
-  <SiteHeader active="news" base="../" />
+  <SiteHeader active="news" />
   <PageTop />
 
   <main class="main">
     <h2>NEWS</h2>
     <h3>2026.08.29</h3>
     <h3>公式サイトをアップデートしました！</h3>
-    <img class="article-main-image" src="../webupdate.jpg" alt="公式サイトアップデートのお知らせ">
+    <img class="article-main-image" src={`${base}webupdate.jpg`} alt="公式サイトアップデートのお知らせ">
     <div class="article-body">
       <p>こんにちは！<br>
         早速お気づきになられた方もいらっしゃるかもしれませんが、この度、電早ラグビー部の公式サイトを大幅アップデートいたしました！</p>
@@ -36,14 +37,14 @@ import PageTop from "../../components/PageTop.astro";
     <nav class="newsnavi" aria-label="記事ナビゲーション">
       <table class="tableArea">
         <tr>
-          <td class="table_right"><a href="n_shinkan2026.html">前へ →</a></td>
+          <td class="table_right"><a href={`${base}news/n_shinkan2026.html`}>前へ →</a></td>
         </tr>
       </table>
-      <p class="article-list-link"><a href="../news.html">ニュース一覧へ戻る</a></p>
+      <p class="article-list-link"><a href={`${base}news.html`}>ニュース一覧へ戻る</a></p>
     </nav>
   </main>
 
-  <SiteFooter base="../" />
-  <script is:inline src="../js/site.js"></script>
+  <SiteFooter />
+  <script is:inline src={`${base}js/site.js`}></script>
 </body>
 </html>

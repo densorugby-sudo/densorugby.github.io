@@ -12,6 +12,7 @@ const articles = [
   { href: "news/n_renewal.html", date: "2025.09.13", title: "公式サイトをリニューアルしました！", image: "webupdate.jpg" },
   { href: "news/n_X.html", date: "2025.08.24", title: "X(旧Twitter)アカウントをリニューアルしました！", image: "image1.jpg" },
 ];
+const base = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
 ---
 
 <!DOCTYPE html>
@@ -21,7 +22,7 @@ const articles = [
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NEWS|電気通信大学×早稲田大学理工ラグビー部</title>
   <meta name="description" content="電早ラグビー部の最新情報、活動報告、新歓情報を掲載しています。">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href={`${base}style.css`}>
 </head>
 <body class="home-page site-page news-index-page">
   <SiteHeader active="news" />
@@ -35,8 +36,8 @@ const articles = [
     <section class="news-archive" aria-label="ニュース一覧">
       {articles.map((article) => (
         <article class="archive-card">
-          <a href={article.href}>
-            <img src={article.image} alt="">
+          <a href={`${base}${article.href}`}>
+            <img src={`${base}${article.image}`} alt="">
             <div><time>{article.date}</time><h2>{article.title}</h2><span>記事を読む →</span></div>
           </a>
         </article>
@@ -44,6 +45,6 @@ const articles = [
     </section>
   </main>
   <SiteFooter />
-  <script is:inline src="js/site.js"></script>
+  <script is:inline src={`${base}js/site.js`}></script>
 </body>
 </html>

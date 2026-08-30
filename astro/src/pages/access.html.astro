@@ -2,6 +2,7 @@
 import SiteHeader from "../components/SiteHeader.astro";
 import SiteFooter from "../components/SiteFooter.astro";
 import PageTop from "../components/PageTop.astro";
+const base = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
 ---
 
 <!DOCTYPE html>
@@ -11,7 +12,7 @@ import PageTop from "../components/PageTop.astro";
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ACCESS|電気通信大学×早稲田大学理工ラグビー部</title>
   <meta name="description" content="電早ラグビー部が活動する電通大多摩川グラウンドへのアクセス情報です。">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href={`${base}style.css`}>
 </head>
 <body class="home-page site-page access-page">
   <SiteHeader active="access" />
@@ -43,6 +44,6 @@ import PageTop from "../components/PageTop.astro";
     </section>
   </main>
   <SiteFooter />
-  <script is:inline src="js/site.js"></script>
+  <script is:inline src={`${base}js/site.js`}></script>
 </body>
 </html>

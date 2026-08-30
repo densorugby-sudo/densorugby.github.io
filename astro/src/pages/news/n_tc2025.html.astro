@@ -1,6 +1,7 @@
 ---
 import SiteHeader from "../../components/SiteHeader.astro";
 import SiteFooter from "../../components/SiteFooter.astro";
+const base = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
 ---
 
 <!DOCTYPE html>
@@ -10,7 +11,7 @@ import SiteFooter from "../../components/SiteFooter.astro";
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NEWS|2025.09.13|電気通信大学×早稲田大学理工ラグビー部</title>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href={`${base}style.css`}>
     <script type="application/ld+json">
 {
     "@context" : "https://schema.org",
@@ -23,16 +24,16 @@ import SiteFooter from "../../components/SiteFooter.astro";
 </head>
 
 <body class="home-page site-page article-page">
-    <SiteHeader active="news" base="../" />
+    <SiteHeader active="news" />
     <header>
-        <a href="../index.html"><img src="../rugby_logo.PNG" alt="rug_logo" width="100px" height="80px"></a>
-        <h2><a href="../index.html" id="header-name">電気通信大学×早稲田大学理工ラグビー部</a></h2>
+        <a href={`${base}index.html`}><img src={`${base}rugby_logo.PNG`} alt="rug_logo" width="100px" height="80px"></a>
+        <h2><a href={`${base}index.html`} id="header-name">電気通信大学×早稲田大学理工ラグビー部</a></h2>
         <p id="menu">menu</p>
         <nav id="nav" class="navi">
             <ul>
-                <li><a href="../index.html">TOP</a></li>
-                <li><a href="../news.html">NEWS</a></li>
-                <li><a href="../access.html">ACCESS</a></li>
+                <li><a href={`${base}index.html`}>TOP</a></li>
+                <li><a href={`${base}news.html`}>NEWS</a></li>
+                <li><a href={`${base}access.html`}>ACCESS</a></li>
             </ul>
         </nav>
         <div id="back" class="menu-background">
@@ -42,7 +43,7 @@ import SiteFooter from "../../components/SiteFooter.astro";
 </header>
 
     <a class="pagetop" href="#">
-        <div class="pagetop__arrow"><img src="../yajirushi.png" alt="yajirushi" width="52px" height="53px"></div>
+        <div class="pagetop__arrow"><img src={`${base}yajirushi.png`} alt="yajirushi" width="52px" height="53px"></div>
     </a>
 
     <div class="main">
@@ -52,7 +53,7 @@ import SiteFooter from "../../components/SiteFooter.astro";
 
         <div class="img-radius">
             <center>
-                <img src="../tc2025summer/sania0906.JPG" alt="sania0906" width="600px">
+                <img src={`${base}tc2025summer/sania0906.JPG`} alt="sania0906" width="600px">
             </center>
             <p>
                 9/4(木)～9/7(日)の4日間、菅平のラグビー合宿へ行ってきました！今回はその様子をまとめました。<br><br>
@@ -73,20 +74,20 @@ import SiteFooter from "../../components/SiteFooter.astro";
             11:00、菅平に到着。
             上田市の「こぶたや」さんでボリューム満点の美味しいロースカツ定食をいただきました。<br><br>
             <center>
-                <img src="../tc2025summer/katsu.jpg" alt="katsu" width="600px">
+                <img src={`${base}tc2025summer/katsu.jpg`} alt="katsu" width="600px">
             </center>
             <br>
             練習グラウンドに移動し、活動開始！高原ならではの涼しい風を浴びながら練習に励み、低酸素の状態に慣れていきました。かなりきつそうにしていましたが、無事に1日目の練習を終えました。<br><br>
 
             <center>
-                <img src="../tc2025summer/ground0904.jpg" alt="ground0904" width="600px">
+                <img src={`${base}tc2025summer/ground0904.jpg`} alt="ground0904" width="600px">
             </center>
             <br>
 
             1日目の夕飯は、宿舎で食べる初のお食事。品数が多く、白米もたっぷり用意されており、お腹を満たすことができました。<br><br>
 
             <center>
-                <img src="../tc2025summer/dinner0904.jpg" alt="dinner0904" width="600px">
+                <img src={`${base}tc2025summer/dinner0904.jpg`} alt="dinner0904" width="600px">
             </center>
             <br>
             その後は宿舎でゆっくり休み、1日目を終えました。<br><br><br>
@@ -99,11 +100,11 @@ import SiteFooter from "../../components/SiteFooter.astro";
             合同練習では、FWとBKに分かれての練習や、スクラム、ラインアウトなどの有名なプレーの練習など普段できない実践的な練習をすることができました。<br><br>
 
             <center>
-                <img src="../tc2025summer/group0905.jpg" alt="group0905" width="600px">
+                <img src={`${base}tc2025summer/group0905.jpg`} alt="group0905" width="600px">
                 <br>
-                <img src="../tc2025summer/prac0905.JPG" alt="prac0905" width="600px">
+                <img src={`${base}tc2025summer/prac0905.JPG`} alt="prac0905" width="600px">
                 <br>
-                <img src="../tc2025summer/kiri0905.jpg" alt="kiri0905" width="600px">
+                <img src={`${base}tc2025summer/kiri0905.jpg`} alt="kiri0905" width="600px">
             </center>
             <br>
             午前中使っていたグラウンドよりもさらに標高の高い場所にあるグラウンドを使ったのですが、霧が立ち込め、まさに雲の中のラグビー、という光景でした。幻想的～！<br><br><br>
@@ -128,18 +129,18 @@ import SiteFooter from "../../components/SiteFooter.astro";
             9:30にグラウンドに入り、アップをし、11:10、キックオフ！！<br><br>
 
             <center>
-                <img src="../tc2025summer/up0907.jpg" alt="up0907" width="600px">
+                <img src={`${base}tc2025summer/up0907.jpg`} alt="up0907" width="600px">
                 <br>
             </center>
             <br>
             スクラムが安定し、相手の間を走り抜けられそうな場面も多々ありました。しかし惜しくもトライには届かず、0-61と悔しい結果になってしまいましたが、大きな怪我もなく無事に終えることができました。<br><br>
 
             <center>
-                <img src="../tc2025summer/defense0907.jpeg" alt="defense0907" width="600px">
+                <img src={`${base}tc2025summer/defense0907.jpeg`} alt="defense0907" width="600px">
                 <br>
-                <img src="../tc2025summer/kick0907.jpeg" alt="kick0907" width="600px">
+                <img src={`${base}tc2025summer/kick0907.jpeg`} alt="kick0907" width="600px">
                 <br>
-                <img src="../tc2025summer/scrum0907.jpeg" alt="scrum0907" width="600px">
+                <img src={`${base}tc2025summer/scrum0907.jpeg`} alt="scrum0907" width="600px">
             </center><br>
 
 
@@ -151,13 +152,13 @@ import SiteFooter from "../../components/SiteFooter.astro";
         <div class="newsnavi">
             <table class="tableArea">
                 <tr>
-                    <td class="table_left"><a href="n_uecfest2025.html">←次へ</a></td>
+                    <td class="table_left"><a href={`${base}news/n_uecfest2025.html`}>←次へ</a></td>
 
-                    <td class="table_right"><a href="n_renewal.html">前へ→</a></td>
+                    <td class="table_right"><a href={`${base}news/n_renewal.html`}>前へ→</a></td>
                 </tr>
             </table>
             <center>
-                <p><a href="../news.html">ニュース一覧へ戻る</a></p>
+                <p><a href={`${base}news.html`}>ニュース一覧へ戻る</a></p>
             </center>
         </div>
     </div>
@@ -175,9 +176,9 @@ import SiteFooter from "../../components/SiteFooter.astro";
 
                 <div class="newsnavi">
                     <ul>
-                        <li><a href="../index.html">TOP</a></li>
-                        <li><a href="../news.html">NEWS</a></li>
-                        <li><a href="../access.html">ACCESS</a></li>
+                        <li><a href={`${base}index.html`}>TOP</a></li>
+                        <li><a href={`${base}news.html`}>NEWS</a></li>
+                        <li><a href={`${base}access.html`}>ACCESS</a></li>
                     </ul>
                 </div>
             </div>
@@ -185,18 +186,18 @@ import SiteFooter from "../../components/SiteFooter.astro";
                 <h3>Links</h3>
                 <p>
                     <a href="https://www.instagram.com/uec_waseda/">
-                        <img src="../Instagram_Glyph_Gradient.png" alt="insta" width="50px" height="50px">
+                        <img src={`${base}Instagram_Glyph_Gradient.png`} alt="insta" width="50px" height="50px">
                     </a>
 
                     <a href="https://x.com/uec_wasedarugby">
-                        <img src="../Xlogo.png" alt="x" width="50px" height="50px">
+                        <img src={`${base}Xlogo.png`} alt="x" width="50px" height="50px">
                     </a>
                 </p>
             </div>
         </div>
     </footer>
-    <SiteFooter base="../" />
-    <script is:inline src="../js/site.js"></script>
+    <SiteFooter />
+    <script is:inline src={`${base}js/site.js`}></script>
 
 </body>
 
