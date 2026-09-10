@@ -3,6 +3,10 @@ import SiteHeader from "../components/SiteHeader.astro";
 import SiteFooter from "../components/SiteFooter.astro";
 import PageTop from "../components/PageTop.astro";
 const base = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
+const pathosPhotos = Array.from({ length: 5 }, (_, index) => ({
+  src: `results/2026/0906/20260906_${index + 1}.jpg`,
+  alt: `菅平合宿・中央大パトス戦の写真 ${index + 1}`,
+}));
 const photos = Array.from({ length: 6 }, (_, index) => ({
   src: `results/2026/0905/20260905_${index + 1}.jpg`,
   alt: `2026年9月5日 菅平合宿・くるみクラブ戦の写真 ${index + 1}`,
@@ -34,6 +38,28 @@ const photos = Array.from({ length: 6 }, (_, index) => ({
       </div>
       <section aria-labelledby="camp-title">
         <div class="camp-heading"><span aria-hidden="true"></span><h3 id="camp-title">菅平合宿</h3></div>
+        <article class="match-card" aria-labelledby="pathos-match-title">
+          <div class="match-meta"><time datetime="2026-08-06">8/6 <span>(日)</span></time><span>試合終了</span></div>
+          <h4 id="pathos-match-title" class="match-score" aria-label="電早 8 対 22 中央大パトス">
+            <span class="team-name team-name--home"><img class="team-logo" src={`${base}rugby_logo.PNG`} alt="" width="112" height="112">電早</span>
+            <span class="score">8 <span class="score-divider">–</span> 22</span>
+            <span class="team-name"><img class="team-logo" src={`${base}pathos_logo.jpg`} alt="" width="112" height="112">中央大パトス</span>
+          </h4>
+          <section class="match-gallery" aria-label="中央大パトス戦のフォトギャラリー">
+            <div class="gallery-heading">
+              <h5>GALLERY</h5>
+              <div class="gallery-controls" hidden>
+                <button type="button" data-direction="-1" aria-label="前の写真へ" aria-controls="pathos-match-photos">←</button>
+                <button type="button" data-direction="1" aria-label="次の写真へ" aria-controls="pathos-match-photos">→</button>
+              </div>
+            </div>
+            <div class="gallery-track" id="pathos-match-photos" tabindex="0" role="region" aria-label="中央大パトス戦の写真">
+              {pathosPhotos.map((photo) => (
+                <figure><button class="gallery-photo" type="button" aria-label={`${photo.alt}を拡大表示`} aria-haspopup="dialog"><img src={`${base}${photo.src}`} alt={photo.alt} loading="lazy" width="720" height="480" /></button></figure>
+              ))}
+            </div>
+          </section>
+        </article>
         <article class="match-card" aria-labelledby="match-title">
           <div class="match-meta"><time datetime="2026-09-05">9/5 <span>(土)</span></time><span>試合終了</span></div>
           <h4 id="match-title" class="match-score" aria-label="電早 8 対 19 くるみクラブ">
@@ -94,9 +120,10 @@ const photos = Array.from({ length: 6 }, (_, index) => ({
       document.documentElement.style.overflow = previousOverflow;
     });
   }
-  const track = document.querySelector<HTMLElement>('.gallery-track');
-  const controls = document.querySelector<HTMLElement>('.gallery-controls');
-  if (track && controls) {
+  document.querySelectorAll<HTMLElement>('.match-gallery').forEach(gallery => {
+    const track = gallery.querySelector<HTMLElement>('.gallery-track');
+    const controls = gallery.querySelector<HTMLElement>('.gallery-controls');
+    if (!track || !controls) return;
     controls.hidden = false;
     const buttons = controls.querySelectorAll<HTMLButtonElement>('button');
     const update = () => {
@@ -110,7 +137,7 @@ const photos = Array.from({ length: 6 }, (_, index) => ({
     track.addEventListener('scroll', update, { passive: true });
     new ResizeObserver(update).observe(track);
     update();
-  }
+  });
 </script>
 
 <style>
@@ -130,6 +157,7 @@ const photos = Array.from({ length: 6 }, (_, index) => ({
   .camp-heading > span { width: 5px; height: 28px; border-radius: 4px; background: var(--color-waseda); }
   .camp-heading h3 { font-size: clamp(22px, 2.5vw, 26px); margin: 0; }
   .match-card { background: white; border: 1px solid #dce3e4; border-radius: 20px; overflow: hidden; box-shadow: 0 12px 36px rgb(5 24 31 / 4%); }
+  .match-card + .match-card { margin-top: 28px; }
   .match-meta { display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; border-bottom: 1px solid #e7eded; }
   .match-meta time { font-size: 20px; font-weight: 800; }
   .match-meta time span { font-size: 15px; margin-left: 4px; }
